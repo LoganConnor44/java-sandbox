@@ -1,11 +1,14 @@
 package loganconnor44.pojo;
 
+import java.sql.Time;
+
 public class Employee {
 
     String name;
     int age;
     String designation;
     double salary;
+    public Time createTs;
 
     // This is the constructor of the class Employee
     public Employee(String name) {
