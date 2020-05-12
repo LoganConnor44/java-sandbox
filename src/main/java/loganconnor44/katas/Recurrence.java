@@ -57,6 +57,6 @@ public class Recurrence {
         });
         Collections.reverse(elementsList);
 
-		return elementsList;
+        return elementsList;
     }
 }
