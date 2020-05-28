@@ -3,6 +3,7 @@ package loganconnor44;
 import static org.junit.Assert.assertTrue;
 
 import loganconnor44.katas.Dictionary;
+import loganconnor44.katas.Isogram;
 import loganconnor44.katas.Recurrence;
 import org.junit.Assert;
 import org.junit.Test;
@@ -101,6 +102,20 @@ public class AppTest {
         List<Integer> actual = recurrence.deleteNth(5);
         List<Integer> expected = Arrays.asList( 1, 1, 1, 1, 1);
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testIsograms() {
+        Isogram isogram = new Isogram();
+        Assert.assertEquals(false, isogram.isIsogram("aa"));
+        Assert.assertEquals(true, isogram.isIsogram("isogram"));
+        Assert.assertEquals(true, isogram.isIsogram("Dermatoglyphics"));
+        Assert.assertEquals(false, isogram.isIsogram("moose"));
+        Assert.assertEquals(false, isogram.isIsogram("isIsogram"));
+        Assert.assertEquals(false, isogram.isIsogram("aba"));
+        Assert.assertEquals(false, isogram.isIsogram("moOse"));
+        Assert.assertEquals(true, isogram.isIsogram("thumbscrewjapingly"));
+        Assert.assertEquals(true, isogram.isIsogram(""));
     }
 
 }
