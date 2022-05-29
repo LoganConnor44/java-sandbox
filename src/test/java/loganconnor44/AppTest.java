@@ -4,7 +4,10 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 import java.util.List;
-
+import loganconnor44.algos.Quicksort;
+import loganconnor44.katas.Dictionary;
+import loganconnor44.katas.Isogram;
+import loganconnor44.katas.Recurrence;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -449,5 +452,25 @@ public class AppTest {
 		boolean expected = true;
 		Assert.assertEquals(expected, actual);
 	}
+
+    @Test
+    public void testQuicksort() {
+        Quicksort quicksort = new Quicksort();
+
+        int[] firstTestInput = new int[]{6,2,1,5,4,3};
+        int[] firstTestExpectedOutput = new int[]{1,2,3,4,5,6};
+        Assert.assertArrayEquals(
+            firstTestExpectedOutput, 
+            quicksort.performSort(
+                firstTestInput, 
+                0, 
+                firstTestInput.length - 1
+            )
+        );
+        // Assert.assertEquals(true, quicksort.isIsogram("isogram"));
+        // Assert.assertEquals(true, quicksort.isIsogram("Dermatoglyphics"));
+    }
+
+    
 
 }
